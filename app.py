@@ -1,3 +1,5 @@
+import os
+
 print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -14,6 +16,11 @@ print("4. Sair\n")
 
 opcao_escolhida = int(input('Escolha uma opção: '))
 print(f"Você escolheu a opção {opcao_escolhida}!")
+
+#A função é um bloco de código, que vai realizar uma determinada ação no momento que a chamarmos
+def finalizar_app():
+    os.system('clear')
+    print("Finalizando o app\n")
 
 if opcao_escolhida == 1:
     print("Cadastrar restaurante")
