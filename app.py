@@ -1,4 +1,6 @@
 import os
+
+
 restaurantes = []
 
 def exibir_nome_do_programa():
@@ -17,7 +19,14 @@ def exibir_opções():
     print("3. Ativar restaurantes")
     print("4. Sair\n")
 
-
+def cadastrar_novo_restaurante():
+    os.system("clear")
+    print("Cadastro de novos restaurantes\n")
+    nome_do_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
+    restaurantes.append(nome_do_restaurante)  #append coloca na lista, entre parenteses, o que desejamos colocar na lista
+    print(f"O restaurante {nome_do_restaurante} foi cadastrado com sucesso!")
+    input(f"Digite uma tecla para voltar ao menu principal.")
+    main()
 
 #A função é um bloco de código, que vai realizar uma determinada ação no momento que a chamarmos
 def finalizar_app():
@@ -29,14 +38,7 @@ def opcao_invalida():
     input("Digite uma tecla voltada ao menu principal")
     main()
 
-def cadastrar_novo_restaurante():
-    os.system("clear")
-    print("Cadastro de novos restaurantes\n")
-    nome_do_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
-    restaurantes.append(nome_do_restaurante)  #append coloca na lista, entre parenteses, o que desejamos colocar na lista
-    print(f"O restauran {nome_do_restaurante} foi cadastrado com sucesso!")
-    input(f"Digite uma tecla para voltar ao menu principal.")
-    main()
+
 
 
 def escolher_opcao():
@@ -66,40 +68,16 @@ def main():
 if __name__ == '__main__':
     main()
 
-#A principal finalidade da instrução match é simplificar a lógica de código ao facilitar o trabalho com diferentes padrões de dados
+
+
+
+
+#Conteúdos
 
 """Funcionalidade do match e do if/elif/else
-if opcao_escolhida == 1:
-        print("Cadastrar restaurante")
-    elif opcao_escolhida == 2:
-        print("Listar restaurantes")
-    elif opcao_escolhida == 3:
-        print("Ativar restaurantes")
-    else:
-        finalizar_app()
-
-Utilizando o match fica:
+Match simplifica a lógica de código
 
 opcao_escolhida = int(input('Escolha uma opção: '))
-match opcao_escolhida:
-    case 1:
-        print('Adicionar restaurante')
-    case 2:
-        print('Listar restaurantes')
-    case 3:
-        print('Ativar restaurante')
-    case 4:
-        print('Finalizar app')
-    case _: Essa instrução equivale a um curinga corresponde a qualquer valor que não tenha sido correspondido pelos casos anteriores, ou seja, equivalente ao else da condicional anterior.
-        print('Opção inválida!')
-
-Será feito um comparativo com todos os valores determinados pelos blocos de case
-
-
-
-Dentro de um bloco match, você pode utilizar a instrução case para definir padrões específicos que serão comparados com a expressão que está sendo correspondida.
-
-
 match expressão:
     case padrão_1:
         # Código a ser executado se expressão corresponder a padrão_1
@@ -109,9 +87,21 @@ match expressão:
     case _:
         # Código a ser executado se nenhum dos padrões anteriores corresponder. Isso é útil para tratar casos não específicos.
 
-Enquanto o if nos proporciona uma maneira eficaz de tomar decisões simples ou complexas em nosso código, adaptando o comportamento do programa de acordo com as circunstâncias determinadas. O match simplifica essa lógica do código quando há múltiplos padrões complexos, oferencendo uma estrutura mais legível, especialmente quando há muitos casos a serem tratados.
+Dentro de um bloco match, você pode utilizar a instrução case para definir padrões específicos que serão comparados com a expressão que está sendo correspondida.
+
+if: Maneira eficaz de tomar decisões simples ou complexas em nosso código, adaptando o comportamento do programa de acordo com as circunstâncias determinadas. O match simplifica essa lógica do código quando há múltiplos padrões complexos, oferencendo uma estrutura mais legível, especialmente quando há muitos casos a serem tratados.
+
+Listas e Tuplas
+
+listas são definidas com [], tuplas são definidas com ()
+listas são mutáveis, é possível modificar seus elementos após sua criação
+tuplas são imutáveis, depois de criadas, seus elementos não podem ser modificados
+listas são menos eficientes quando há uma manipulação de grandes conjuntos de dados, por sua mutabilidade
+listas são ideais quando há a necessidade de uma coleção de elementos que pode ser modificada com o tempo. Exemplo: lista de tarefas
+lista = []: cria uma lista
+append(): adiciona item à lista;
+remove(): remove item da lista;
+print()
+    for item in lista: exibe os itens da lista
+tuplas são apropriadas quando há garantia de que os elementos não serão alterados depois. Possuem um desempenho melhor em operações de leitura e acesso a elementos
 """
-
-#implementação das partes escolhidas
-#cadastro do restaurante no arquivo app.py
-
