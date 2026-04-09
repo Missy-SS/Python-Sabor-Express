@@ -1,4 +1,5 @@
 import os
+restaurantes = []
 
 def exibir_nome_do_programa():
     print("""
@@ -28,14 +29,23 @@ def opcao_invalida():
     input("Digite uma tecla voltada ao menu principal")
     main()
 
+def cadastrar_novo_restaurante():
+    os.system("clear")
+    print("Cadastro de novos restaurantes\n")
+    nome_do_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
+    restaurantes.append(nome_do_restaurante)  #append coloca na lista, entre parenteses, o que desejamos colocar na lista
+    print(f"O restauran {nome_do_restaurante} foi cadastrado com sucesso!")
+    input(f"Digite uma tecla para voltar ao menu principal.")
+    main()
+
+
 def escolher_opcao():
 
     try:
         opcao_escolhida = int(input("Escolha uma opção: "))
         
-
         if opcao_escolhida == 1:
-            print("Cadastrar restaurante")
+            cadastrar_novo_restaurante()
         elif opcao_escolhida == 2:
             print("Listar restaurantes")
         elif opcao_escolhida == 3:
@@ -101,4 +111,7 @@ match expressão:
 
 Enquanto o if nos proporciona uma maneira eficaz de tomar decisões simples ou complexas em nosso código, adaptando o comportamento do programa de acordo com as circunstâncias determinadas. O match simplifica essa lógica do código quando há múltiplos padrões complexos, oferencendo uma estrutura mais legível, especialmente quando há muitos casos a serem tratados.
 """
+
+#implementação das partes escolhidas
+#cadastro do restaurante no arquivo app.py
 
