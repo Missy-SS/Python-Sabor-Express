@@ -1,7 +1,7 @@
 import os
 
 
-restaurantes = []
+restaurantes = ['Pizza', 'Sushi']
 
 def exibir_nome_do_programa():
     print("""
@@ -35,11 +35,18 @@ def finalizar_app():
 
 def opcao_invalida():
     print("Opção inválida!\n")
-    input("Digite uma tecla voltada ao menu principal")
+    input("\nDigite uma tecla voltada ao menu principal")
     main()
 
+def listar_restaurantes():
+    os.system("clear")
+    print("Listando os restaurantes\n")
 
+    for restaurante in restaurantes:
+        print(f".{restaurante}")
 
+    input("\nDigite uma tecla voltada ao menu principal")
+    main()
 
 def escolher_opcao():
 
@@ -49,7 +56,7 @@ def escolher_opcao():
         if opcao_escolhida == 1:
             cadastrar_novo_restaurante()
         elif opcao_escolhida == 2:
-            print("Listar restaurantes")
+            listar_restaurantes()
         elif opcao_escolhida == 3:
             print("Ativar restaurantes")
         elif opcao_escolhida == 4:
@@ -67,6 +74,8 @@ def main():
     
 if __name__ == '__main__':
     main()
+
+
 
 
 
@@ -104,4 +113,7 @@ remove(): remove item da lista;
 print()
     for item in lista: exibe os itens da lista
 tuplas são apropriadas quando há garantia de que os elementos não serão alterados depois. Possuem um desempenho melhor em operações de leitura e acesso a elementos
+
+
+
 """
