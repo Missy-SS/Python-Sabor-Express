@@ -8,6 +8,7 @@ restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
 
 
 def exibir_nome_do_programa():
+    '''Essa função exibe o nome do programa'''
     print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -18,23 +19,28 @@ def exibir_nome_do_programa():
 """)
 
 def exibir_opções():
+    '''Essa função exibe as opções'''
     print("1. Cadastrar restaurante")
     print("2. Listar restaurantes")
     print("3. Açternar estado do restaurante")
     print("4. Sair\n")
 
 def finalizar_app():
+    '''Essa função mostra a finalização do app'''
     exibir_subtitulo("Finalizando app")
 
 def voltar_ao_menu_principal():
+    '''Essa função volta ao menu principal'''
     input('\nDigite uma tecla para voltar ao menu principal')
     main()
 
 def opcao_invalida():
+    '''Essa opção indica opção inválida'''
     print("Opção inválida!\n")
     voltar_ao_menu_principal()
 
 def exibir_subtitulo(texto):
+    '''Essa função é responsável por dar um subtitulo'''
     os.system('cls')
     linha = '*' * (len(texto))
     print(linha)
@@ -43,6 +49,7 @@ def exibir_subtitulo(texto):
     print()
 
 def cadastrar_novo_restaurante():
+    '''Essa função é responsável por cadastrar um novo restaurante'''
     exibir_subtitulo("Cadastro de novos restaurantes")
     nome_do_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
     categoria = input(f"Digite o nome da categoria do restaurante {nome_do_restaurante}: ")
@@ -56,6 +63,7 @@ def cadastrar_novo_restaurante():
 #A função é um bloco de código, que vai realizar uma determinada ação no momento que a chamarmos
 
 def listar_restaurantes():
+    '''Essa função é responsável por listar os restaurantes'''
     exibir_subtitulo("Listando restaurantes")
 
     print(f"{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status")
@@ -69,6 +77,7 @@ def listar_restaurantes():
 
 
 def alternar_estado_restaurante():
+    '''Essa função alterna o estado do restaurante'''
     exibir_subtitulo('ALterando estado do restaurante')
     nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
     restaurante_encontrado = False
@@ -87,6 +96,7 @@ def alternar_estado_restaurante():
 
 
 def escolher_opcao():
+    '''Essa função exibe escolher uma opção'''
     try:
         opcao_escolhida = int(input("Escolha uma opção: "))
         
@@ -142,7 +152,6 @@ Dentro de um bloco match, você pode utilizar a instrução case para definir pa
 if: Maneira eficaz de tomar decisões simples ou complexas em nosso código, adaptando o comportamento do programa de acordo com as circunstâncias determinadas. O match simplifica essa lógica do código quando há múltiplos padrões complexos, oferencendo uma estrutura mais legível, especialmente quando há muitos casos a serem tratados.
 
 Listas e Tuplas
-
 listas são definidas com [], tuplas são definidas com ()
 listas são mutáveis, é possível modificar seus elementos após sua criação
 tuplas são imutáveis, depois de criadas, seus elementos não podem ser modificados
@@ -154,7 +163,4 @@ remove(): remove item da lista;
 print()
     for item in lista: exibe os itens da lista
 tuplas são apropriadas quando há garantia de que os elementos não serão alterados depois. Possuem um desempenho melhor em operações de leitura e acesso a elementos
-
-
-
 """
