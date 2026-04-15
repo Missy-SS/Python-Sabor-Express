@@ -49,7 +49,13 @@ def exibir_subtitulo(texto):
     print()
 
 def cadastrar_novo_restaurante():
-    '''Essa função é responsável por cadastrar um novo restaurante'''
+    '''Essa função é responsável por cadastrar um novo restaurante
+    - Nome do restaurante
+    - Categoria
+
+    Output:
+    - Adiciona um novo restaurante à lista de restaurantes
+    '''
     exibir_subtitulo("Cadastro de novos restaurantes")
     nome_do_restaurante = input("Digite o nome do restaurante que deseja cadastrar: ")
     categoria = input(f"Digite o nome da categoria do restaurante {nome_do_restaurante}: ")
@@ -63,7 +69,14 @@ def cadastrar_novo_restaurante():
 #A função é um bloco de código, que vai realizar uma determinada ação no momento que a chamarmos
 
 def listar_restaurantes():
-    '''Essa função é responsável por listar os restaurantes'''
+    '''Essa função é responsável por listar os restaurantes
+    - Nome do restaurante
+    - Categoria
+    - Status
+
+    Output:
+    - Exibe a lista dos restaurantes
+    '''
     exibir_subtitulo("Listando restaurantes")
 
     print(f"{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status")
@@ -77,7 +90,12 @@ def listar_restaurantes():
 
 
 def alternar_estado_restaurante():
-    '''Essa função alterna o estado do restaurante'''
+    '''Essa função alterna o estado do restaurante
+    - Estado do restaurante
+
+    Output:
+    - Determina o estado do restaurante
+    '''
     exibir_subtitulo('ALterando estado do restaurante')
     nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
     restaurante_encontrado = False
@@ -96,7 +114,15 @@ def alternar_estado_restaurante():
 
 
 def escolher_opcao():
-    '''Essa função exibe escolher uma opção'''
+    '''Essa função exibe escolher uma opção
+    - cadastrar novo restaurante
+    - Listar restaurantes
+    - Alternar estado do restaurante
+    - Finalizar app
+
+    Output:
+    - Escolha selecionada
+    '''
     try:
         opcao_escolhida = int(input("Escolha uma opção: "))
         
