@@ -15,9 +15,14 @@ class Restaurante:
     @property
     def ativo(this):
         return "✔️" if this._ativo == True else "✗"
+
+    def alternar_estado(this):
+        this._ativo = not this._ativo
+                
         
 
 restaurante_praca = Restaurante("praça", "gourmet")
+restaurante_praca.alternar_estado()
 restaurante_pizza = Restaurante("pizzaExpress", "italiana")
 
 Restaurante.listar_restaurantes()
