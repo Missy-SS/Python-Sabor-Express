@@ -21,8 +21,3 @@ class Restaurante:
                 
         
 
-restaurante_praca = Restaurante("praça", "gourmet")
-restaurante_praca.alternar_estado()
-restaurante_pizza = Restaurante("pizzaExpress", "italiana")
-
-Restaurante.listar_restaurantes()
