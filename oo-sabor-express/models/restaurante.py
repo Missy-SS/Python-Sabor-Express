@@ -36,4 +36,19 @@ class Restaurante:
         quantidade_de_notas = len(this._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas)
         return media
+    
+    def adicionar_cardapio(this, item):
+        if isinstance(item, ItemCardapio):
+            this._cardapio.append(item)
 
+
+    @property
+    def exibir_cardapio(this):
+        print(f'Cardapio do restaurante {this._nome}\n')
+        for i,item in enumerate(this._cardapio,start=1):
+            if hasattr(item, "descricao"):
+                mensagem_prato = f'{i}. Nome: {item._nome} | Preço: R${item._preco} | Descrição: {item.descricao}'
+                print(mensagem_prato)
+            else:
+                mensagem_bebida = f'{i}. Nome: {item._nome} | Preço: R${item._preco} | Tamanho: {item._tamanho}'
+                print(mensagem_bebida)
